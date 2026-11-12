@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Videobotschaft &amp; Videogruß | Weihnachtsmann &amp; Engelchen</title>
+  <meta name="description" content="Persönliche Weihnachtsvideos vom Weihnachtsmann und seinem Engelchen: kurzer Videogruß fürs Handy ab 25 € oder ausführliche Videobotschaft mit Goldenem Buch ab 60 €.">
+  <meta name="theme-color" content="#F8F3EA">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Videobotschaft &amp; Videogruß">
+  <meta property="og:description" content="Persönliche Weihnachtsvideos vom Weihnachtsmann und seinem Engelchen: kurzer Videogruß fürs Handy ab 25 € oder ausführliche Videobotschaft mit Goldenem Buch ab 60 €.">
+  <meta property="og:image" content="../Bilder/hero-weihnachtsmann-engelchen.webp">
+
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+
+  <link rel="preload" href="../fonts/literata-72-light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/literata-72-light-italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../fonts/jost-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/seiten.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<svg class="unsichtbar" aria-hidden="true" focusable="false">
+  <symbol id="stern" viewBox="0 0 24 24"><path d="M12 0c.6 7 5 11.4 12 12-7 .6-11.4 5-12 12-.6-7-5-11.4-12-12 7-.6 11.4-5 12-12z"/></symbol>
+  <symbol id="pfeil" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="winkel" viewBox="0 0 24 24"><path d="M6 9.5l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="sprechblase" viewBox="0 0 24 24"><path d="M12 3.5a8.500 8.500 0 0 0-7.300 12.800L3.500 20.500l4.300-1.100A8.500 8.500 0 1 0 12 3.500z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="brief" viewBox="0 0 24 24"><path d="M3.5 6.500h17v11h-17zM3.500 7l8.500 6.500L20.500 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="hoerer" viewBox="0 0 24 24"><path d="M6.200 3.800h3.100l1.500 4.200-2 1.500a11 11 0 0 0 5.700 5.700l1.500-2 4.200 1.500v3.100a2 2 0 0 1-2.200 2A16.500 16.500 0 0 1 4.200 6a2 2 0 0 1 2-2.200z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="abspielen" viewBox="0 0 24 24"><path d="M8 5.500v13l11-6.500z"/></symbol>
+  <symbol id="kreuz" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="1.500" stroke-linecap="round"/></symbol>
+  <symbol id="haken" viewBox="0 0 24 24"><path d="M5 12.500l4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="sprung" href="#inhalt">Zum Inhalt springen</a>
+<canvas class="staub" id="staub" aria-hidden="true"></canvas>
+
+<!-- ============ Kopf ============ -->
+<header class="kopf" id="kopf">
+  <div class="kopf__innen">
+    <a class="marke" href="../" aria-label="Weihnachtsmann &amp; Engelchen, zur Startseite">
+      <span class="marke__eins">Weihnachtsmann</span>
+      <span class="marke__zwei"><em>&amp;</em>Engelchen</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <div class="nav__gruppe" id="nav-angebote">
+        <button class="nav__link nav__auf" type="button" aria-expanded="false" aria-controls="untermenue" aria-current="true">Angebote<svg aria-hidden="true"><use href="#winkel"/></svg></button>
+        <div class="untermenue" id="untermenue">
+          <div class="untermenue__spalte">
+            <p class="dachzeile">Für Familien</p>
+            <a href="../bescherung/"><b>Bescherung zu Hause</b><small>Mit Goldenem Buch, bei euch im Wohnzimmer</small></a>
+            <a href="../videos/"><b>Videobotschaft &amp; Videogruß</b><small>Persönlich, auch aus der Ferne</small></a>
+          </div>
+          <div class="untermenue__spalte">
+            <p class="dachzeile">Für Unternehmen &amp; Einrichtungen</p>
+            <a href="../firmen-events/"><b>Firmenfeiern &amp; Events</b><small>Feiern, Märkte, Einkaufszentren</small></a>
+            <a href="../kita-schule/"><b>Kita &amp; Schule</b><small>Ruhig, kindgerecht, abgestimmt</small></a>
+            <a href="../werbung-medien/"><b>Werbung &amp; Medien</b><small>Foto, Film, Fernsehen, Social Media</small></a>
+          </div>
+        </div>
+      </div>
+      <a class="nav__link" href="../einblicke/">Einblicke</a>
+      <a class="nav__link" href="../ueber-uns/">Über uns</a>
+      <a class="nav__link" href="../preise/">Preise</a>
+      <a class="knopf knopf--klein" href="../anfrage/"><span>Termin anfragen</span></a>
+    </nav>
+
+    <button class="menue" id="menue" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="menue__striche" aria-hidden="true"></span>
+      <span class="nur-vorlesen">Menü</span>
+    </button>
+
+    <button class="glocke" id="glocke" type="button" aria-label="Glocke läuten">
+      <span class="glocke__faden" aria-hidden="true"></span>
+      <svg class="glocke__bild" viewBox="0 0 64 64" aria-hidden="true">
+        <defs>
+          <linearGradient id="messing" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#F1DBA9"/>
+            <stop offset=".45" stop-color="#C79A4E"/>
+            <stop offset="1" stop-color="#8C672B"/>
+          </linearGradient>
+        </defs>
+        <circle cx="32" cy="10.5" r="4" fill="none" stroke="url(#messing)" stroke-width="2.2"/>
+        <circle class="glocke__kloeppel" cx="32" cy="55" r="3.8" fill="url(#messing)"/>
+        <path d="M32 15c-10 0-13 9-13 18 0 7-3 11-7 15h40c-4-4-7-8-7-15 0-9-3-18-13-18z" fill="url(#messing)"/>
+        <rect x="10" y="46.5" width="44" height="4.5" rx="2.2" fill="url(#messing)"/>
+        <path d="M25.5 21.5c-2.2 2.8-3 7-3 11.5" fill="none" stroke="#FFF6DD" stroke-width="1.6" stroke-linecap="round" opacity=".7"/>
+      </svg>
+      <span class="glocke__tipp" aria-hidden="true">Läuten erlaubt</span>
+    </button>
+  </div>
+</header>
+
+<main id="inhalt">
+
+  <section class="seitenkopf" aria-labelledby="seitentitel">
+    <div class="seitenkopf__innen">
+      <div>
+        <ol class="pfad" aria-label="Ihr seid hier">
+          <li><a href="../">Start</a></li>
+          <li>Für Familien</li>
+        </ol>
+        <h1 class="seitenkopf__titel" id="seitentitel">Weihnachtszauber <em>kennt keine Entfernung</em></h1>
+        <p class="seitenkopf__lead">Persönliche Videos vom Weihnachtsmann und seinem Engelchen: als kurzer Gruß direkt aufs Handy oder als ausführliche Botschaft aus dem Goldenen Buch.</p>
+        <div class="seitenkopf__aktionen">
+          <a class="knopf" href="../anfrage/?anlass=videobotschaft"><span>Video anfragen</span><svg aria-hidden="true"><use href="#stern"/></svg></a>
+          <a class="textlink" href="#formate">Die zwei Formate<svg aria-hidden="true"><use href="#pfeil"/></svg></a>
+        </div>
+      </div>
+      <div class="seitenkopf__bild">
+        <span class="licht licht--1" aria-hidden="true"></span>
+        <span class="licht licht--2" aria-hidden="true"></span>
+        <div class="geraete zeig">
+          <div class="schirm">
+            <img src="../Bilder/goldenes-buch.webp" width="1100" height="825" fetchpriority="high"
+                 alt="Videobotschaft im Querformat: Der Weihnachtsmann liest aus dem Goldenen Buch">
+          </div>
+          <div class="handy">
+            <img src="../Bilder/video-hochformat.webp" width="485" height="862"
+                 alt="Videogruß im Hochformat: Der Weihnachtsmann läutet lachend seine Glocke">
+          </div>
+        </div>
+        <svg class="funke funke--1" aria-hidden="true"><use href="#stern"/></svg>
+      </div>
+    </div>
+
+    <ul class="fakten" aria-label="Auf einen Blick">
+      <li><b>25 €</b><span>kurzer Videogruß</span></li>
+      <li><b>ab 60 €</b><span>Videobotschaft mit Goldenem Buch</span></li>
+      <li><b>Überallhin</b><span>per WhatsApp oder E-Mail</span></li>
+      <li><b>Persönlich</b><span>mit Namen und euren Geschichten</span></li>
+    </ul>
+  </section>
+
+  <!-- Formate -->
+  <section class="abschnitt" id="formate" aria-labelledby="formate-titel">
+    <div class="abschnitt__kopf zeig">
+      <p class="dachzeile"><svg aria-hidden="true"><use href="#stern"/></svg>Zwei Formate</p>
+      <h2 class="titel" id="formate-titel">Kurz aufs Handy oder <em>ausführlich auf den Fernseher</em></h2>
+    </div>
+
+    <div class="formate">
+      <article class="format zeig" id="videogruss">
+        <div class="format__geraet">
+          <div class="handy">
+            <img src="../Bilder/video-hochformat.webp" width="485" height="862" loading="lazy" alt="">
+            <span class="spielknopf" aria-hidden="true"><svg><use href="#abspielen"/></svg></span>
+          </div>
+        </div>
+        <p class="dachzeile">Hochformat · fürs Handy</p>
+        <div class="format__kopf">
+          <h3>Kurzer Videogruß</h3>
+          <p class="format__preis">25 €<small>pro Gruß</small></p>
+        </div>
+        <p>Eine kleine Überraschung mit Namen und eurer Botschaft. Ideal für WhatsApp, auch aus der Ferne.</p>
+        <ul class="sternliste">
+          <li><b>Persönliche Anrede</b><span>mehrere Personen in einem Video möglich</span></li>
+          <li><b>Für viele Anlässe</b><span>Nikolaus, Heiligabend oder zum Geburtstag</span></li>
+          <li><b>Wunschzettel-Update</b><span>Wir erinnern ans Schreiben oder bestätigen, dass er angekommen ist</span></li>
+          <li><b>Auch für Gruppen</b><span>Kitas, Schulen, Kollegen und Kunden</span></li>
+        </ul>
+        <a class="knopf" href="../anfrage/?anlass=videogruss"><span>Videogruß anfragen</span><svg aria-hidden="true"><use href="#stern"/></svg></a>
+      </article>
+
+      <article class="format zeig" id="videobotschaft" style="--warte:.12s">
+        <div class="format__geraet">
+          <div class="schirm">
+            <img src="../Bilder/goldenes-buch.webp" width="1100" height="825" loading="lazy" alt="">
+            <span class="spielknopf" aria-hidden="true"><svg><use href="#abspielen"/></svg></span>
+          </div>
+        </div>
+        <p class="dachzeile">Querformat · für Fernseher und Laptop</p>
+        <div class="format__kopf">
+          <h3>Videobotschaft mit Goldenem Buch</h3>
+          <p class="format__preis">60 €<small>+ 10 € je weiterer Person</small></p>
+        </div>
+        <p>Der Weihnachtsmann liest aus dem Goldenen Buch und geht auf jedes Kind einzeln ein. So leitet das Video eure Bescherung ein.</p>
+        <ul class="sternliste">
+          <li><b>Eure Geschichten</b><span>kleine Erfolge, besondere Erlebnisse, Weihnachtswünsche</span></li>
+          <li><b>Für jedes Kind einzeln</b><span>mit Lob und einem liebevollen Blick aufs Jahr</span></li>
+          <li><b>Fotos und Wunschzettel</b><span>können nach Absprache einfließen</span></li>
+          <li><b>Zum gemeinsamen Anschauen</b><span>an Heiligabend auf dem großen Bildschirm</span></li>
+        </ul>
+        <a class="knopf" href="../anfrage/?anlass=videobotschaft"><span>Videobotschaft anfragen</span><svg aria-hidden="true"><use href="#stern"/></svg></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Beispiel -->
+  <section class="nacht flaeche-innen" aria-labelledby="beispiel-titel">
+    <div class="beispiel">
+      <a class="beispiel__film zeig" href="https://www.youtube.com/watch?v=37MS4vAp_Zc" target="_blank" rel="noopener" aria-label="Beispielvideo auf YouTube ansehen">
+        <img src="../Bilder/team-vater-tochter.webp" width="1200" height="900" loading="lazy" alt="">
+        <span class="spielknopf" aria-hidden="true"><svg><use href="#abspielen"/></svg></span>
+      </a>
+      <div class="zeig">
+        <p class="dachzeile"><svg aria-hidden="true"><use href="#stern"/></svg>Beispiel</p>
+        <h2 class="titel" id="beispiel-titel">So kann eine Videobotschaft <em>aussehen</em></h2>
+        <p class="lauftext">Ein Blick in ein fertiges Video. Es öffnet sich auf YouTube, erst dort werden Daten an YouTube übertragen.</p>
+        <div class="kanaele">
+          <a class="textlink textlink--hell" href="https://www.youtube.com/watch?v=37MS4vAp_Zc" target="_blank" rel="noopener">Auf YouTube ansehen<svg aria-hidden="true"><use href="#pfeil"/></svg></a>
+          <a class="textlink textlink--hell" href="https://www.instagram.com/weihnachtsmann_und_engelchen/" target="_blank" rel="noopener">Mehr auf Instagram<svg aria-hidden="true"><use href="#pfeil"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ablauf -->
+  <section class="abschnitt" aria-labelledby="ablauf-titel">
+    <div class="abschnitt__kopf zeig">
+      <p class="dachzeile"><svg aria-hidden="true"><use href="#stern"/></svg>So läuft es ab</p>
+      <h2 class="titel" id="ablauf-titel">So kommt euer Video <em>an</em></h2>
+    </div>
+    <ol class="schritte">
+      <li class="schritt zeig">
+        <span class="schritt__nr" aria-hidden="true">1</span>
+        <h3>Namen und Botschaft nennen</h3>
+        <p>Für wen ist das Video, und was soll der Weihnachtsmann sagen? Ein paar Stichpunkte genügen.</p>
+      </li>
+      <li class="schritt zeig">
+        <span class="schritt__nr" aria-hidden="true">2</span>
+        <h3>Liefertermin abstimmen</h3>
+        <p>Wir prüfen euren Wunschtermin und bestätigen euch die Einzelheiten persönlich.</p>
+      </li>
+      <li class="schritt zeig">
+        <span class="schritt__nr" aria-hidden="true">3</span>
+        <h3>Freude weitergeben</h3>
+        <p>Das fertige Video kommt per WhatsApp, per E-Mail oder auf beiden Wegen zu euch.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Für Teams -->
+  <section class="abschnitt abschnitt--leinen" aria-labelledby="teams-titel">
+    <div class="spalten">
+      <div class="spalten__bild spalten__bild--quer zeig">
+        <div class="fenster">
+          <div class="fenster__glas">
+            <img src="../Bilder/videogruss.webp" width="900" height="675" loading="lazy"
+                 alt="Das Engelchen zeigt lächelnd ein Handy, auf dem ein Videogruß vom Weihnachtsmann läuft">
+          </div>
+        </div>
+      </div>
+      <div class="zeig">
+        <p class="dachzeile"><svg aria-hidden="true"><use href="#stern"/></svg>Nicht nur für Kinder</p>
+        <h2 class="titel" id="teams-titel">Ho, ho, ho <em>fürs ganze Team</em></h2>
+        <p class="lauftext">Ein Videogruß passt auch ins Büro: als Überraschung für Kolleginnen und Kollegen, als Dankeschön für Kunden oder als Gruß an die ganze Kitagruppe.</p>
+        <p style="margin-top:2rem"><a class="textlink" href="../anfrage/?anlass=videogruss">Gruß für eine Gruppe anfragen<svg aria-hidden="true"><use href="#pfeil"/></svg></a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fragen -->
+  <section class="abschnitt" aria-labelledby="fragen-titel">
+    <div class="abschnitt__kopf zeig">
+      <p class="dachzeile"><svg aria-hidden="true"><use href="#stern"/></svg>Gut zu wissen</p>
+      <h2 class="titel" id="fragen-titel">Häufige <em>Fragen</em></h2>
+    </div>
+    <div class="faq zeig">
+      <details class="faq__eintrag">
+        <summary>Können mehrere Personen in einem Video vorkommen?<span class="faq__plus" aria-hidden="true"></span></summary>
+        <div class="faq__antwort"><p>Ja. Beim kurzen Videogruß sind mehrere Namen möglich. Bei der Videobotschaft gilt der Grundpreis für eine Person, jede weitere kostet 10 € zusätzlich.</p></div>
+      </details>
+      <details class="faq__eintrag">
+        <summary>Können Fotos oder der Wunschzettel einfließen?<span class="faq__plus" aria-hidden="true"></span></summary>
+        <div class="faq__antwort"><p>Ja, bei der ausführlichen Videobotschaft nach vorheriger Abstimmung.</p></div>
+      </details>
+      <details class="faq__eintrag">
+        <summary>Wie bekommen wir das Video?<span class="faq__plus" aria-hidden="true"></span></summary>
+        <div class="faq__antwort"><p>Per WhatsApp, per E-Mail oder auf beiden Wegen. Den Liefertermin bestätigen wir euch persönlich.</p></div>
+      </details>
+      <details class="faq__eintrag">
+        <summary>Wie bezahlen wir?<span class="faq__plus" aria-hidden="true"></span></summary>
+        <div class="faq__antwort"><p>Per PayPal oder Überweisung. Die Zahlungsinformationen bekommt ihr mit unserer Bestätigung.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Abschluss -->
+  <section class="abschluss" aria-labelledby="abschluss-titel">
+    <div class="nacht abschluss__flaeche">
+      <div class="abschluss__innen zeig">
+        <svg class="abschluss__stern" aria-hidden="true"><use href="#stern"/></svg>
+        <h2 class="titel" id="abschluss-titel">Eure Geschichten gehören <em>ins Goldene Buch</em></h2>
+        <p>Schreibt uns, für wen das Video gedacht ist. Umfang und Liefertermin klären wir mit euch.</p>
+        <div class="abschluss__aktionen">
+          <a class="knopf knopf--gold" href="../anfrage/?anlass=videobotschaft"><span>Video anfragen</span><svg aria-hidden="true"><use href="#stern"/></svg></a>
+          <a class="textlink textlink--hell" href="https://wa.me/4917636467542" target="_blank" rel="noopener">Per WhatsApp fragen<svg aria-hidden="true"><use href="#pfeil"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ Fuß ============ -->
+<footer class="fuss">
+  <div class="fuss__innen">
+    <div class="fuss__marke">
+      <p class="fuss__name">Weihnachtsmann <em>&amp;</em> Engelchen</p>
+      <p class="fuss__spruch">Buchbar für eine schöne Weihnachtszeit.</p>
+    </div>
+
+    <nav class="fuss__spalte" aria-label="Angebote">
+      <p class="dachzeile">Angebote</p>
+      <a href="../bescherung/">Bescherung zu Hause</a>
+      <a href="../videos/">Videobotschaft &amp; Videogruß</a>
+      <a href="../firmen-events/">Firmenfeiern &amp; Events</a>
+      <a href="../kita-schule/">Kita &amp; Schule</a>
+      <a href="../werbung-medien/">Werbung &amp; Medien</a>
+    </nav>
+
+    <nav class="fuss__spalte" aria-label="Weitere Seiten">
+      <p class="dachzeile">Mehr</p>
+      <a href="../einblicke/">Einblicke</a>
+      <a href="../ueber-uns/">Über uns</a>
+      <a href="../preise/">Preise</a>
+      <a href="../anfrage/">Anfrage</a>
+    </nav>
+
+    <div class="fuss__spalte">
+      <p class="dachzeile">Kontakt</p>
+      <a href="tel:+4917636467542">+49 176 36467542</a>
+      <a href="https://wa.me/4917636467542" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:kontakt@weihnachtsmann-engelchen.de">kontakt@weihnachtsmann-engelchen.de</a>
+      <span class="fuss__sozial"><a href="https://www.instagram.com/weihnachtsmann_und_engelchen/" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@weihnachtsmann_und_engel" target="_blank" rel="noopener">TikTok</a></span>
+    </div>
+  </div>
+
+  <div class="fuss__unten">
+    <p>© <span data-jahr>2026</span> Weihnachtsmann &amp; Engelchen · Potsdam</p>
+    <p class="fuss__recht">
+      <a href="../impressum/">Impressum</a>
+      <a href="../datenschutz/">Datenschutz</a>
+      <a href="../buchungsbedingungen/">Buchungsbedingungen</a>
+    </p>
+    <p class="fuss__dank">Website von <a href="https://timokochitsolutions.de" target="_blank" rel="noopener">Timo Koch IT Solutions</a></p>
+  </div>
+</footer>
+
+<a class="wa" id="wa" href="https://wa.me/4917636467542" target="_blank" rel="noopener" aria-label="Per WhatsApp schreiben">
+  <svg aria-hidden="true"><use href="#sprechblase"/></svg><span>WhatsApp</span>
+</a>
+
+<script src="../js/main.js" defer></script>
+<script src="../js/seiten.js" defer></script>
+</body>
+</html>
